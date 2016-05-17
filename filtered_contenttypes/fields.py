@@ -35,6 +35,7 @@ class FilteredGenericForeignKey(RegisterLookupMixin, GenericForeignKey):
 
     # Needed to fix https://code.djangoproject.com/ticket/25747 for Django 1.9
     is_relation = False
+    primary_key = False
 
     def __init__(self, *args, **kw):
         # The line below is needed to bypass this
